@@ -62,5 +62,12 @@ namespace UniversityManagementSystem
         {
             Application.Exit();
         }
+
+        private void adminPictureBox_Click(object sender, EventArgs e)
+        {
+            AdminLogInForm openForm = new AdminLogInForm();
+            openForm.Show();
+            Visible = false;
+        }
     }
 }

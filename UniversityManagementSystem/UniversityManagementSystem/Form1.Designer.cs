@@ -51,6 +51,7 @@
             this.adminPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.adminPictureBox.TabIndex = 0;
             this.adminPictureBox.TabStop = false;
+            this.adminPictureBox.Click += new System.EventHandler(this.adminPictureBox_Click);
             this.adminPictureBox.MouseLeave += new System.EventHandler(this.adminPictureBox_MouseLeave);
             this.adminPictureBox.MouseHover += new System.EventHandler(this.adminPictureBox_MouseHover);
             // 
