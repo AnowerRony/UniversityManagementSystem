@@ -8,7 +8,7 @@ using UniversityManagementSystem.Models.EntityModels;
 
 namespace UniversityManagementSystem.DAL
 {
-    class UserGateway : CommonGateway
+    public class UserGateway : CommonGateway
     {
         public List<User> GetAll()
         {
@@ -31,6 +31,17 @@ namespace UniversityManagementSystem.DAL
             reader.Close();
             Connection.Close();
             return users;
+        }
+
+        public int LogIn(string userName, string password)
+        {
+            string query = "SELECT COUNT(Id) FROM User WHERE UserName = " + userName + "AND Password = " + password +
+                            "";
+            Connection.Open();
+            Command.CommandText = query;
+            int rowsAffected = Command.ExecuteNonQuery();
+            Connection.Close();
+            return rowsAffected;
         }
     }
 }

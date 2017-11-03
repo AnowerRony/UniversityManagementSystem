@@ -51,6 +51,12 @@
     <Compile Include="AdminLogInForm.Designer.cs">
       <DependentUpon>AdminLogInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="BLL\UserManager.cs" />
     <Compile Include="DAL\CommonGateway.cs" />
     <Compile Include="DAL\UserGateway.cs" />
@@ -90,7 +96,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\admin.png" />

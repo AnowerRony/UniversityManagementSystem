@@ -4,16 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UniversityManagementSystem.DAL;
-using UniversityManagementSystem.Models.EntityModels;
 
 namespace UniversityManagementSystem.BLL
 {
-    class UserManager
+    public class UserManager
     {
         UserGateway _userGateway = new UserGateway();
-        public List<User> GetAll()
+
+        public bool LogIn(string userName, string password)
         {
-            return _userGateway.GetAll();
+            int rowsAffected = _userGateway.LogIn(userName, password);
+            if (rowsAffected > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

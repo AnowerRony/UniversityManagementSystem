@@ -42,7 +42,20 @@ namespace UniversityManagementSystem
 
         private void adminLogInButton_Click(object sender, EventArgs e)
         {
-
+            string userName = adminUserNameTextBox.Text;
+            string password = adminPasswordTextBox.Text;
+            if (userManager.LogIn(userName, password))
+            {
+                AdminPanel openAdminPanel = new AdminPanel();
+                openAdminPanel.Show();
+                Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Enter Correct Use Name and Password");
+                adminUserNameTextBox.Clear();
+                adminPasswordTextBox.Clear();
+            }
         }
     }
 }
