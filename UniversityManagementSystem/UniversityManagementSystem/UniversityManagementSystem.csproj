@@ -51,13 +51,16 @@
     <Compile Include="AdminLogInForm.Designer.cs">
       <DependentUpon>AdminLogInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\UserManager.cs" />
     <Compile Include="DAL\CommonGateway.cs" />
+    <Compile Include="DAL\UserGateway.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityModels\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdminLogInForm.resx">
