@@ -57,5 +57,10 @@ namespace UniversityManagementSystem
         {
             exitPictureBox.Image = Resources.icon;
         }
+
+        private void exitPictureBox_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

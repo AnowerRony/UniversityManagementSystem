@@ -63,6 +63,7 @@
             this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitPictureBox.TabIndex = 1;
             this.exitPictureBox.TabStop = false;
+            this.exitPictureBox.Click += new System.EventHandler(this.exitPictureBox_Click);
             this.exitPictureBox.MouseLeave += new System.EventHandler(this.exitPictureBox_MouseLeave);
             this.exitPictureBox.MouseHover += new System.EventHandler(this.exitPictureBox_MouseHover);
             // 
