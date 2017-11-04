@@ -10,38 +10,26 @@ namespace UniversityManagementSystem.DAL
 {
     public class UserGateway : CommonGateway
     {
-        public List<User> GetAll()
+        
+
+        public int LogIn(string userName, string password)
         {
-            string query = "SELECT * FROM User";
+            string query = "SELECT COUNT(Id) FROM User WHERE UserName = '" + userName + "' AND Password = '" + password +
+                            "'";
             Connection.Open();
             Command.CommandText = query;
             SqlDataReader reader = Command.ExecuteReader();
-            List<User> users = new List<User>();
+            int count = 0;
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    User user = new User();
-                    user.Id = (int) reader["Id"];
-                    user.UserName = reader["UserName"].ToString();
-                    user.Password = reader["Password"].ToString();
-                    users.Add(user);
+                    count += Convert.ToInt32(reader[0]);
                 }
             }
             reader.Close();
             Connection.Close();
-            return users;
-        }
-
-        public int LogIn(string userName, string password)
-        {
-            string query = "SELECT COUNT(Id) FROM User WHERE UserName = " + userName + "AND Password = " + password +
-                            "";
-            Connection.Open();
-            Command.CommandText = query;
-            int rowsAffected = Command.ExecuteNonQuery();
-            Connection.Close();
-            return rowsAffected;
+            return count;
         }
     }
 }

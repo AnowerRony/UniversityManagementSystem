@@ -46,8 +46,8 @@ namespace UniversityManagementSystem
             string password = adminPasswordTextBox.Text;
             if (userManager.LogIn(userName, password))
             {
-                AdminPanel openAdminPanel = new AdminPanel();
-                openAdminPanel.Show();
+                AdminPanel openFrm = new AdminPanel();
+                openFrm.Show();
                 Visible = false;
             }
             else
