@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using UniversityManagementSystem.Models.EntityModels;
 
 namespace UniversityManagementSystem.DAL
@@ -14,7 +16,7 @@ namespace UniversityManagementSystem.DAL
 
         public int LogIn(string userName, string password)
         {
-            string query = "SELECT COUNT(Id) FROM User WHERE UserName = '" + userName + "' AND Password = '" + password +
+            string query = "SELECT COUNT(Id) FROM UserTable WHERE UserName = '" + userName + "' AND Password = '" + password +
                             "'";
             Connection.Open();
             Command.CommandText = query;
@@ -30,6 +32,7 @@ namespace UniversityManagementSystem.DAL
             reader.Close();
             Connection.Close();
             return count;
+
         }
     }
 }
