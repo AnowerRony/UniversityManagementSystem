@@ -76,6 +76,8 @@
             this.adminUserNameTextBox.Name = "adminUserNameTextBox";
             this.adminUserNameTextBox.Size = new System.Drawing.Size(224, 27);
             this.adminUserNameTextBox.TabIndex = 3;
+            this.adminUserNameTextBox.Text = "User Name";
+            this.adminUserNameTextBox.Click += new System.EventHandler(this.adminUserNameTextBox_Click);
             // 
             // adminPasswordTextBox
             // 

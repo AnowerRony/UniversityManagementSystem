@@ -57,5 +57,13 @@ namespace UniversityManagementSystem
                 adminPasswordTextBox.Clear();
             }
         }
+
+        private void adminUserNameTextBox_Click(object sender, EventArgs e)
+        {
+            if (adminUserNameTextBox.Text == "User Name")
+            {
+                adminUserNameTextBox.Text = "";
+            }
+        }
     }
 }
