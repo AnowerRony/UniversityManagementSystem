@@ -66,6 +66,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\EntityModels\Department.cs" />
+    <Compile Include="Models\EntityModels\Designation.cs" />
+    <Compile Include="Models\EntityModels\Teacher.cs" />
     <Compile Include="Models\EntityModels\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
