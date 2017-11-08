@@ -69,5 +69,19 @@ namespace UniversityManagementSystem
             openForm.Show();
             Visible = false;
         }
+
+        private void teacherPictureBox_Click(object sender, EventArgs e)
+        {
+            TeacherLoginForm opnForm = new TeacherLoginForm();
+            opnForm.Show();
+            Visible = false;
+        }
+
+        private void studentPictureBox_Click(object sender, EventArgs e)
+        {
+            StudentLoginForm opnForm = new StudentLoginForm();
+            opnForm.Show();
+            Visible = false;
+        }
     }
 }

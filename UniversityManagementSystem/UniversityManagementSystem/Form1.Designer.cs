@@ -77,6 +77,7 @@
             this.teacherPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.teacherPictureBox.TabIndex = 2;
             this.teacherPictureBox.TabStop = false;
+            this.teacherPictureBox.Click += new System.EventHandler(this.teacherPictureBox_Click);
             this.teacherPictureBox.MouseLeave += new System.EventHandler(this.teacherPictureBox_MouseLeave);
             this.teacherPictureBox.MouseHover += new System.EventHandler(this.teacherPictureBox_MouseHover);
             // 
@@ -89,6 +90,7 @@
             this.studentPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.studentPictureBox.TabIndex = 3;
             this.studentPictureBox.TabStop = false;
+            this.studentPictureBox.Click += new System.EventHandler(this.studentPictureBox_Click);
             this.studentPictureBox.MouseLeave += new System.EventHandler(this.studentPictureBox_MouseLeave);
             this.studentPictureBox.MouseHover += new System.EventHandler(this.studentPictureBox_MouseHover);
             // 
