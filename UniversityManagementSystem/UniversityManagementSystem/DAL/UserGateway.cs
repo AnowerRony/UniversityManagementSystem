@@ -16,8 +16,8 @@ namespace UniversityManagementSystem.DAL
 
         public int LogIn(string userName, string password)
         {
-            string query = "SELECT COUNT(Id) FROM UserTable WHERE UserName = '" + userName + "' AND Password = '" + password +
-                            "'";
+            string query = "SELECT COUNT(Id) FROM UserTable WHERE UserName = '" + userName + "'COLLATE SQL_Latin1_General_CP1_CS_AS AND Password = '" + password +
+                            "'COLLATE SQL_Latin1_General_CP1_CS_AS";
             Connection.Open();
             Command.CommandText = query;
             SqlDataReader reader = Command.ExecuteReader();

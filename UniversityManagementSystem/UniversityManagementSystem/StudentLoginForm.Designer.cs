@@ -35,10 +35,11 @@
             this.studentUserPictureBox = new System.Windows.Forms.PictureBox();
             this.studentPasswordPictureBox = new System.Windows.Forms.PictureBox();
             this.studentUserNameTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.studentPasswordTextBox = new System.Windows.Forms.TextBox();
             this.studentLogInButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.warningLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.studentBackPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentExitPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentUserPictureBox)).BeginInit();
@@ -53,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(132, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 26);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 5;
             this.label1.Text = "STUDENT LOGIN";
             // 
             // studentBackPictureBox
@@ -107,18 +108,21 @@
             this.studentUserNameTextBox.Location = new System.Drawing.Point(121, 166);
             this.studentUserNameTextBox.Name = "studentUserNameTextBox";
             this.studentUserNameTextBox.Size = new System.Drawing.Size(224, 27);
-            this.studentUserNameTextBox.TabIndex = 4;
+            this.studentUserNameTextBox.TabIndex = 0;
+            this.studentUserNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // passwordTextBox
+            // studentPasswordTextBox
             // 
-            this.passwordTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.passwordTextBox.Location = new System.Drawing.Point(121, 244);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(224, 27);
-            this.passwordTextBox.TabIndex = 4;
+            this.studentPasswordTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.studentPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentPasswordTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentPasswordTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.studentPasswordTextBox.Location = new System.Drawing.Point(121, 244);
+            this.studentPasswordTextBox.Name = "studentPasswordTextBox";
+            this.studentPasswordTextBox.PasswordChar = '*';
+            this.studentPasswordTextBox.Size = new System.Drawing.Size(224, 27);
+            this.studentPasswordTextBox.TabIndex = 1;
+            this.studentPasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // studentLogInButton
             // 
@@ -130,9 +134,10 @@
             this.studentLogInButton.Location = new System.Drawing.Point(77, 347);
             this.studentLogInButton.Name = "studentLogInButton";
             this.studentLogInButton.Size = new System.Drawing.Size(268, 36);
-            this.studentLogInButton.TabIndex = 5;
+            this.studentLogInButton.TabIndex = 2;
             this.studentLogInButton.Text = "Log In";
             this.studentLogInButton.UseVisualStyleBackColor = false;
+            this.studentLogInButton.Click += new System.EventHandler(this.studentLogInButton_Click);
             // 
             // label2
             // 
@@ -142,7 +147,7 @@
             this.label2.Location = new System.Drawing.Point(117, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 19);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 3;
             this.label2.Text = "USER NAME";
             // 
             // label3
@@ -153,8 +158,20 @@
             this.label3.Location = new System.Drawing.Point(117, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 19);
-            this.label3.TabIndex = 7;
+            this.label3.TabIndex = 4;
             this.label3.Text = "PASSWORD";
+            // 
+            // warningLabel
+            // 
+            this.warningLabel.AutoSize = true;
+            this.warningLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningLabel.ForeColor = System.Drawing.Color.Red;
+            this.warningLabel.Location = new System.Drawing.Point(62, 109);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(58, 20);
+            this.warningLabel.TabIndex = 6;
+            this.warningLabel.Text = "label4";
+            this.warningLabel.Visible = false;
             // 
             // StudentLoginForm
             // 
@@ -162,10 +179,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(449, 555);
+            this.Controls.Add(this.warningLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.studentLogInButton);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.studentPasswordTextBox);
             this.Controls.Add(this.studentUserNameTextBox);
             this.Controls.Add(this.studentPasswordPictureBox);
             this.Controls.Add(this.studentUserPictureBox);
@@ -194,9 +212,10 @@
         private System.Windows.Forms.PictureBox studentUserPictureBox;
         private System.Windows.Forms.PictureBox studentPasswordPictureBox;
         private System.Windows.Forms.TextBox studentUserNameTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.TextBox studentPasswordTextBox;
         private System.Windows.Forms.Button studentLogInButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label warningLabel;
     }
 }

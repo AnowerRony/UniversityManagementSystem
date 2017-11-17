@@ -39,6 +39,7 @@
             this.adminLogInButton = new System.Windows.Forms.Button();
             this.adminBackPictureBox = new System.Windows.Forms.PictureBox();
             this.adminExitPictureBox = new System.Windows.Forms.PictureBox();
+            this.warningLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userNamepictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBackPictureBox)).BeginInit();
@@ -53,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(142, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 26);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 5;
             this.label1.Text = "ADMIN LOGIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -76,8 +77,8 @@
             this.adminUserNameTextBox.Location = new System.Drawing.Point(121, 166);
             this.adminUserNameTextBox.Name = "adminUserNameTextBox";
             this.adminUserNameTextBox.Size = new System.Drawing.Size(224, 27);
-            this.adminUserNameTextBox.TabIndex = 3;
-            this.adminUserNameTextBox.Click += new System.EventHandler(this.adminUserNameTextBox_Click);
+            this.adminUserNameTextBox.TabIndex = 0;
+            this.adminUserNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // adminPasswordTextBox
             // 
@@ -90,7 +91,8 @@
             this.adminPasswordTextBox.Name = "adminPasswordTextBox";
             this.adminPasswordTextBox.PasswordChar = '*';
             this.adminPasswordTextBox.Size = new System.Drawing.Size(224, 27);
-            this.adminPasswordTextBox.TabIndex = 3;
+            this.adminPasswordTextBox.TabIndex = 1;
+            this.adminPasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // passwordPictureBox
             // 
@@ -110,7 +112,7 @@
             this.label2.Location = new System.Drawing.Point(117, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 19);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 3;
             this.label2.Text = "USER NAME";
             // 
             // label3
@@ -121,7 +123,7 @@
             this.label3.Location = new System.Drawing.Point(117, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 19);
-            this.label3.TabIndex = 1;
+            this.label3.TabIndex = 4;
             this.label3.Text = "PASSWORD";
             // 
             // adminLogInButton
@@ -134,7 +136,7 @@
             this.adminLogInButton.Location = new System.Drawing.Point(77, 347);
             this.adminLogInButton.Name = "adminLogInButton";
             this.adminLogInButton.Size = new System.Drawing.Size(268, 36);
-            this.adminLogInButton.TabIndex = 5;
+            this.adminLogInButton.TabIndex = 2;
             this.adminLogInButton.Text = "Log In";
             this.adminLogInButton.UseVisualStyleBackColor = false;
             this.adminLogInButton.Click += new System.EventHandler(this.adminLogInButton_Click);
@@ -161,12 +163,26 @@
             this.adminExitPictureBox.TabStop = false;
             this.adminExitPictureBox.Click += new System.EventHandler(this.adminExitPictureBox_Click);
             // 
+            // warningLabel
+            // 
+            this.warningLabel.AutoSize = true;
+            this.warningLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
+            this.warningLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningLabel.ForeColor = System.Drawing.Color.Red;
+            this.warningLabel.Location = new System.Drawing.Point(62, 109);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(58, 20);
+            this.warningLabel.TabIndex = 6;
+            this.warningLabel.Text = "label4";
+            this.warningLabel.Visible = false;
+            // 
             // AdminLogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(28)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(449, 555);
+            this.Controls.Add(this.warningLabel);
             this.Controls.Add(this.adminExitPictureBox);
             this.Controls.Add(this.adminBackPictureBox);
             this.Controls.Add(this.adminLogInButton);
@@ -202,5 +218,6 @@
         private System.Windows.Forms.Button adminLogInButton;
         private System.Windows.Forms.PictureBox adminBackPictureBox;
         private System.Windows.Forms.PictureBox adminExitPictureBox;
+        private System.Windows.Forms.Label warningLabel;
     }
 }

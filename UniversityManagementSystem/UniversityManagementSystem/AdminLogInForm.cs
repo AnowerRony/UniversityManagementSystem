@@ -50,9 +50,28 @@ namespace UniversityManagementSystem
                 openFrm.Show();
                 Visible = false;
             }
+            else if (adminUserNameTextBox.Text=="" || adminPasswordTextBox.Text=="")
+            {
+                if (adminUserNameTextBox.Text=="" && adminPasswordTextBox.Text=="")
+                {
+                    warningLabel.Text = "Please provide a Username and Password";
+                    warningLabel.Visible = true;
+                }
+                else if (adminPasswordTextBox.Text == "")
+                {
+                    warningLabel.Text = "Please provide a Password";
+                    warningLabel.Visible = true;
+                }
+                else
+                {
+                    warningLabel.Text = "Please provide a Username";
+                    warningLabel.Visible = true;
+                }
+            }
             else
             {
-                MessageBox.Show("Enter Correct Use Name and Password");
+                warningLabel.Text = "Wrong Username Or Password";
+                warningLabel.Visible = true;
                 adminUserNameTextBox.Clear();
                 adminPasswordTextBox.Clear();
             }
@@ -60,10 +79,7 @@ namespace UniversityManagementSystem
 
         private void adminUserNameTextBox_Click(object sender, EventArgs e)
         {
-            if (adminUserNameTextBox.Text == "User Name")
-            {
-                adminUserNameTextBox.Text = "";
-            }
+
         }
     }
 }
