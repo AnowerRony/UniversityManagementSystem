@@ -65,6 +65,7 @@
             this.studentBackPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.studentBackPictureBox.TabIndex = 1;
             this.studentBackPictureBox.TabStop = false;
+            this.studentBackPictureBox.Click += new System.EventHandler(this.studentBackPictureBox_Click);
             // 
             // studentExitPictureBox
             // 
@@ -75,6 +76,7 @@
             this.studentExitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.studentExitPictureBox.TabIndex = 2;
             this.studentExitPictureBox.TabStop = false;
+            this.studentExitPictureBox.Click += new System.EventHandler(this.studentExitPictureBox_Click);
             // 
             // studentUserPictureBox
             // 
@@ -172,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentLoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentLoginForm";
             this.Load += new System.EventHandler(this.StudentLoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.studentBackPictureBox)).EndInit();

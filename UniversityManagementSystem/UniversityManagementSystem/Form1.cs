@@ -60,7 +60,16 @@ namespace UniversityManagementSystem
 
         private void exitPictureBox_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialog = MessageBox.Show("Do you really want to close the program?", "Exit",
+                MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+
+            }
         }
 
         private void adminPictureBox_Click(object sender, EventArgs e)

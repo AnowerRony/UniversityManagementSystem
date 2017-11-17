@@ -16,5 +16,26 @@ namespace UniversityManagementSystem
         {
             InitializeComponent();
         }
+
+        private void teacherBackPictureBox_Click(object sender, EventArgs e)
+        {
+            startForm openForm = new startForm();
+            openForm.Show();
+            Visible = false;
+        }
+
+        private void teacherExitPictureBox_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you really want to close the program?", "Exit",
+                MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (dialog == DialogResult.No)
+            {
+
+            }
+        }
     }
 }

@@ -58,9 +58,9 @@
             // exitPictureBox
             // 
             this.exitPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("exitPictureBox.Image")));
-            this.exitPictureBox.Location = new System.Drawing.Point(781, 12);
+            this.exitPictureBox.Location = new System.Drawing.Point(771, 7);
             this.exitPictureBox.Name = "exitPictureBox";
-            this.exitPictureBox.Size = new System.Drawing.Size(34, 28);
+            this.exitPictureBox.Size = new System.Drawing.Size(39, 37);
             this.exitPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitPictureBox.TabIndex = 1;
             this.exitPictureBox.TabStop = false;
