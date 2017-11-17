@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogInForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userNamepictureBox = new System.Windows.Forms.PictureBox();
             this.adminUserNameTextBox = new System.Windows.Forms.TextBox();
             this.adminPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.passwordPictureBox = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.adminLogInButton = new System.Windows.Forms.Button();
             this.adminBackPictureBox = new System.Windows.Forms.PictureBox();
             this.adminExitPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userNamepictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBackPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminExitPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -57,18 +57,19 @@
             this.label1.Text = "ADMIN LOGIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // userNamepictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 166);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.userNamepictureBox.Image = ((System.Drawing.Image)(resources.GetObject("userNamepictureBox.Image")));
+            this.userNamepictureBox.Location = new System.Drawing.Point(77, 166);
+            this.userNamepictureBox.Name = "userNamepictureBox";
+            this.userNamepictureBox.Size = new System.Drawing.Size(29, 25);
+            this.userNamepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userNamepictureBox.TabIndex = 2;
+            this.userNamepictureBox.TabStop = false;
             // 
             // adminUserNameTextBox
             // 
+            this.adminUserNameTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.adminUserNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.adminUserNameTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminUserNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -76,11 +77,11 @@
             this.adminUserNameTextBox.Name = "adminUserNameTextBox";
             this.adminUserNameTextBox.Size = new System.Drawing.Size(224, 27);
             this.adminUserNameTextBox.TabIndex = 3;
-            this.adminUserNameTextBox.Text = "User Name";
             this.adminUserNameTextBox.Click += new System.EventHandler(this.adminUserNameTextBox_Click);
             // 
             // adminPasswordTextBox
             // 
+            this.adminPasswordTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.adminPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.adminPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.adminPasswordTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,15 +92,15 @@
             this.adminPasswordTextBox.Size = new System.Drawing.Size(224, 27);
             this.adminPasswordTextBox.TabIndex = 3;
             // 
-            // pictureBox2
+            // passwordPictureBox
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(77, 244);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.passwordPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("passwordPictureBox.Image")));
+            this.passwordPictureBox.Location = new System.Drawing.Point(77, 244);
+            this.passwordPictureBox.Name = "passwordPictureBox";
+            this.passwordPictureBox.Size = new System.Drawing.Size(29, 27);
+            this.passwordPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.passwordPictureBox.TabIndex = 4;
+            this.passwordPictureBox.TabStop = false;
             // 
             // label2
             // 
@@ -126,6 +127,8 @@
             // adminLogInButton
             // 
             this.adminLogInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.adminLogInButton.FlatAppearance.BorderSize = 0;
+            this.adminLogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminLogInButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adminLogInButton.ForeColor = System.Drawing.Color.White;
             this.adminLogInButton.Location = new System.Drawing.Point(77, 347);
@@ -167,10 +170,10 @@
             this.Controls.Add(this.adminExitPictureBox);
             this.Controls.Add(this.adminBackPictureBox);
             this.Controls.Add(this.adminLogInButton);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.passwordPictureBox);
             this.Controls.Add(this.adminPasswordTextBox);
             this.Controls.Add(this.adminUserNameTextBox);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.userNamepictureBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -178,8 +181,8 @@
             this.Name = "AdminLogInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLogInForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userNamepictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.passwordPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminBackPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminExitPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -190,10 +193,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox userNamepictureBox;
         private System.Windows.Forms.TextBox adminUserNameTextBox;
         private System.Windows.Forms.TextBox adminPasswordTextBox;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox passwordPictureBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button adminLogInButton;

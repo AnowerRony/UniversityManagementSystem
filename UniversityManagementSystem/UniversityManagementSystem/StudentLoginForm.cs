@@ -16,5 +16,10 @@ namespace UniversityManagementSystem
         {
             InitializeComponent();
         }
+
+        private void StudentLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
